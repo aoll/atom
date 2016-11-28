@@ -1,0 +1,38 @@
+'.source.lua':
+  'print();':
+    'prefix': 'print'
+    'body': 'print("\\\\n\\\\n\\\\n $1 == " ..  ..  "\\\\n\\\\n\\\\n\\\\n")'
+
+'.source.c':
+
+  'print comment':
+    'prefix' : 'com'
+    'body': '/**\n * $1\n */'
+  'print debug':
+    'prefix': 'put'
+    'body': 'ft_putstr("$1\\\\n");'
+
+  'if statement':
+    'prefix': 'if'
+    'body': 'if ($1)\n{\n}'
+
+  'else statement':
+    'prefix': 'else'
+    'body': 'else \n{\n\t$1\n}'
+
+  'loop while':
+    'prefix': 'while'
+    'body': 'while ($1)\n{\n}'
+
+  'int name();':
+    'prefix': 'int'
+    'body': '/**\n * $1\n */\nint\t$2()\n{\n\t\n\treturn (EXIT_SUCCESS);\n}'
+  'void name();':
+    'prefix': 'void'
+    'body': '/**\n * $1\n */\nvoid\t$1()\n{\n\t\n\treturn;\n}'
+  'char name();':
+    'prefix': 'char'
+    'body': '/**\n * $1\n */\nchar\t$1()\n{\n\t\n\treturn ();\n}'
+  'char* name();':
+    'prefix': 'char*'
+    'body': '/**\n * $1\n */\nchar*\t$1()\n{\n\t\n\treturn ();\n}'

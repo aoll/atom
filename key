@@ -1,0 +1,6 @@
+'.platform-win32, .platform-linux':
+  'ctrl-h': 'tree-view:toggle'
+
+'atom-workspace atom-text-editor':
+  'ctrl-right': 'window:focus-pane-on-right'
+  'ctrl-left': 'window:focus-pane-on-left'
